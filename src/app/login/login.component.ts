@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
           if(this.loginresult.success == false){
             this.toast.error(this.loginresult.error);
           }else if(this.loginresult.success = 'true'){
-            this.toast.success("Successfully Login!");
+            this.toast.success("Successfully Logged in!");
             
             var id = this.loginresult.data.id;
             var username = this.loginresult.data.email;
