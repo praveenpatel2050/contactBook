@@ -1,0 +1,27 @@
+<div class="container">
+    <header>
+        <h1 style="font-family: comis sans ms">Add New Contact to Your ContactBook</h1>
+        <hr>
+    </header>
+    <form #myform="ngForm" (ngSubmit)="contactNew(myform)" class="was-validated" >
+        <div class="form-group">
+            <label for="contactNew-name"><span class="hidden">Name</span></label>
+            <input class="form-control" type="text" name="name" id="contactNew-name"  placeholder="Enter Name" [ngModel]="name" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNew-email">Email</label>
+            <input type="email" class="form-control" name="email" id="contactNew-email"  placeholder="Enter Email"  autocomplete="email username" [ngModel]="email" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNew-phone">Phone</label>
+            <input type="tel" class="form-control" name="phone" id="contactNew-phone" placeholder="Enter Telephone Number" autocomplete="tel" [ngModel]="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNew-address">Address</label>
+            <textarea class="form-control" name="address" id="contactNew-address" placeholder="Enter Address" autocomplete="street-address" [ngModel]="address" required ></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="submit" value="Save" class="btn btn-info">
+        </div>
+    </form>
+</div>

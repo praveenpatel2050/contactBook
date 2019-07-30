@@ -1,0 +1,19 @@
+<div class="container">
+        <h2>Profile Page</h2>
+        <div class="card" style="width:400px">
+          <!-- <img class="card-img-top" [src]="vendor/img_avatar1.png" alt="Card image" style="width:100%"> -->
+          <img src="./assets/img/img_avatar1.png" style="width: 100%" alt="Card Image">
+          <div class="card-body" *ngIf="users">
+            <h3 class="card-title">{{users.name}}</h3>
+            <p class="card-text">Phone : <span style="text-align:center;color: yellowgreen">{{users.phone}}</span></p>
+            <p class="card-text">Email: <span style="text-align:center;color: yellowgreen">{{users.email}}</span></p>            
+            <address class="card-text">Address:<span style="text-align:center;color: yellowgreen">{{users.address}}</span></address>
+            <p class="card-text">Account Created :<span style="text-align:center;color: yellowgreen">{{users.createdtime | date:'d/M/y'}}&nbsp;&nbsp;{{users.createdtime | date:'shortTime'}}</span></p>
+            <hr>
+            <h3> Total Contacts in Your List</h3>
+            <p class="card-text" style="font-size:28px;text-align:center;color: yellowgreen">{{users.total_contacts}}</p>
+             <hr>
+            <a (click)="updateProfile(users.id)" class="btn btn-primary"><i class="fa fa-edit"></i> Edit Profile</a>&nbsp;&nbsp;&nbsp;
+            <a (click)="updatePassword(users.id)" class="btn btn-info"><i class="fa fa-arrow-circle-o-up"></i> Change Password</a>
+        </div>
+        <br>

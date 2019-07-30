@@ -1,0 +1,37 @@
+<div class="container">
+<header>
+	<h1 style="font-family: comis sans ms">SignUp to ContactBook</h1>
+	<h3>It's Free for Use. Create Unlimited Contact.</h3>
+	<hr>
+</header>
+	<form #myform="ngForm" (ngSubmit)="signup(myform)" class="was-validated">
+		<div class="form-group">
+			<label for="signup-name"><span class="hidden">Name</span></label>
+			<input class="form-control" type="text" name="name" id="signup-name" placeholder="Enter Name" ngModel required>
+		</div>
+		<div class="form-group">
+			<label for="signup-email">Email</label>
+			<input type="email" class="form-control" name="email" id="signup-email" placeholder="Enter Email"  autocomplete="email username" ngModel required="">
+		</div>
+		<div class="form-group">
+			<label for="signup-phone">phone</label>
+			<input type="tel" class="form-control" name="phone" id="signup-phone" placeholder="Enter Telephone Number" autocomplete="tel" ngModel required>
+		</div>
+		<div class="form-group">
+			<label for="signup-address">Address</label>
+			<textarea class="form-control" name="address" id="signup-address" placeholder="Enter Address" autocomplete="street-address" ngModel required ></textarea>
+		</div>
+		<div class="form-group">
+			<label for="signup-password">Password</label>
+			<input type="password" class="form-control" name="password" id="signup-password" minlength="6" placeholder="Enter Password (6 character)" autocomplete="new-password" ngModel required>
+			
+		</div>
+		<div class="form-group">
+			
+				<input type="submit" name="submit" value="Signup" class="btn btn-info">
+					&nbsp;&nbsp;
+				<input type="button" class="btn-group btn btn-primary" onclick="window.history.go(-1); return false;" value="Back" />
+
+		</div>
+	</form>
+</div>

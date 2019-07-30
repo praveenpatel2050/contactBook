@@ -1,0 +1,24 @@
+<!-- <div *ngIf="loginresult" [style.display]="'block'" class="alert alert-success" role="alert">
+	<strong>{{loginresult.message}}</strong>
+</div> -->
+<div class="container">
+	<header>
+		<h1 style="font-family: comis sans ms">Login to ContactBook</h1>
+		<hr>
+	</header>
+	<form #myform="ngForm" (ngSubmit)="login(myform)" class="was-validated">
+		<div class="form-group">
+			<label for="login-email">Email</label>
+			<input type="email" class="form-control" name="email" id="login-email" autocomplete="username email" placeholder="Enter Username" ngModel required="">
+		</div>
+		<div class="form-group">
+			<label for="login-password">Password</label>
+			<input type="password" class="form-control" name="password" id="login-password" autocomplete="current-password" placeholder="Enter Password" ngModel required="">
+			
+		</div>
+		<div class="form-group"> 
+			<button type="submit" name="submit"  class="btn btn-info"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" (click)="signup()"> Signup</button>
+		</div>
+	</form>
+</div>

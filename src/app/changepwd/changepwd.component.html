@@ -1,0 +1,18 @@
+<div class="container">
+    <header>
+        <h1 style="font-family: comis sans ms">Change Your Password</h1>
+        <hr>
+    </header>
+    <form #myform="ngForm" (ngSubmit)="changepwd(myform)" class="was-validated">
+        <div class="form-group">
+            <label for="changepwd-password">Password</label>
+            <input type="password" class="form-control" name="password" id="changepwd-password" minlength="6" placeholder="Enter Password (6 character)" autocomplete="new-password" ngModel required>
+            
+        </div>
+
+        <div class="form-group">
+            <input type="submit" name="submit" value="Submit" class="btn btn-info">
+        </div>
+    </form>
+</div>
+        

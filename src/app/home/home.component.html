@@ -1,0 +1,60 @@
+<div class="jumbotron" style="text-align: center;">
+  <h1>Contact Book</h1>
+  <h3>The Contact book use for the Create new Contact with detail. </h3>
+</div>
+<div class="container">
+    <div  class="row col-sm-12" *ngIf="name">
+      <h3 style="color: yellowgreen">Welcome {{name}}</h3> 
+      <!-- <button class="btn btn-danger" style="float: right" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button> -->
+  </div>
+  <div class="clearfx"></div>
+<!-- </div> --><br>
+<div  class="row col-sm-12">
+
+  <div class="card col-sm-5" >
+    <!-- <img class="card-img-top" [src]="vendor/img_avatar1.png" alt="Card image" style="width:100%"> -->
+    <!-- <img src="vendor/img_avatar1.png" style="width: 100%" alt="Card Image"> -->
+    <div class="card-body">
+      <h2 class="card-title" style="font-weight: bold">Create New Contact</h2>
+      <h3 class="card-text"><span style="text-align:center;color: yellowgreen">Create Unlimited Contacts </span></h3>
+      <p class="card-text" style="font-size:20px;text-align:center;color: yellowgreen">Click Below Button to add</p>
+      <i class="fa fa-arrow-down" aria-hidden="true" style="font-size: 25px"></i>
+      <hr>
+    <div class="card-block" align="center">
+      <button (click)="createContact()" class="btn btn-primary" style="margin-left: 20px;"><i class="fa fa-plus-circle"></i>&nbsp; Add Contacts</button>&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="card col-sm-5" style="float: right;">
+  <div class="card-body">
+    <h2 class="card-title" style="font-weight: bold">Display Contacts</h2>
+    <h3 class="card-text"><span style="text-align:center;color: yellowgreen">Total Contacts</span> : <span style="color:red">{{total}}</span></h3>
+    <p class="card-text" style="font-size:20px;text-align:center;color: yellowgreen">Click Below Button To List</p>
+    <i class="fa fa-arrow-down" aria-hidden="true" style="font-size: 25px"></i>
+    <hr>
+    <div class="card-block" align="center">
+      <button (click)="showContact()" class="btn btn-primary" style="margin-left: 20px;"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Show Contacts</button>&nbsp;&nbsp;&nbsp;
+    </div>
+</div>
+</div>
+<!-- <div style="padding-top:.9rem;">
+  <div class="card" style="width: 21rem; margin:0 auto;" >
+      
+      <img class="card-img-top" 
+          style="margin:0 auto;width:100%;height:200px;"
+          src="https://static.pexels.com/photos/130111/pexels-photo-130111.jpeg" 
+          alt="Preserve your moments" />
+          
+      <div class="card-block" align="center">
+          <h4 class="card-title">Momentz-4-ever</h4>
+          <p class="card-text">Preserve your life moments in clouds...forever! </p>
+          
+          <button class="btn btn-primary"
+           (click)="onLoginClick()">
+          facebook
+          </button>
+      </div>
+  </div>
+</div> -->
+</div>

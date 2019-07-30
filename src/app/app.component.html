@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+<nav class="navbar navbar-dark navbar-expand-sm bg-dark" *ngIf="islogin">
+  <div class="container-fluid">
+    <ul class="navbar-nav" >
+      <li class="nav-item">
+        <a routerLink="" class="nav-link" routerLinkActive="active">Dashboard</a>
+      </li>
+      <!-- <li class="nav-item" *ngIf="!islogin">
+         <a routerLink="signup" class="nav-link" routerLinkActive="active">Signup</a> 
+      </li> -->
+      <!-- <li class="nav-item" *ngIf="!islogin" >
+        <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+      </li> -->
+      <li class="nav-item"> 
+          <a routerLink="profile" class="nav-link" routerLinkActive="active">Profile</a>
+        </li>
+      <li class="nav-item">
+          <a routerLink="contactlist" class="nav-link" routerLinkActive="active">Contacts</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="addcontact" class="nav-link" routerLinkActive="active">New Contacts</a>
+      </li>
+    </ul>
+    <ul class="navbar navbar-nav" style="float: right" *ngIf="islogin">
+    <li class="nav nav-item"><button class="btn btn-danger" style="float: right" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button></li>
+    </ul>
+  </div>
+</nav>
+ </div>
+<router-outlet></router-outlet>

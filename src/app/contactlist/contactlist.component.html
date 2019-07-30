@@ -1,0 +1,41 @@
+<div class="container">
+    <header>
+        <h1 class="header">Contact list</h1>
+        <h4 class="NewContact">
+            <button class="btn btn-success" (click)="gotonewcontact()"><i class="fa fa-plus-square" aria-hidden="true"></i> Add New Contact </button>
+        </h4>
+    </header>
+    <div class="table">
+            <!-- <cdk-virtual-scroll-viewport> -->
+        <table class="table table-responsive table-hover table-striped table-inverse">
+            <thead class="thead-inverse">
+                    <tr>
+                    <th>Contact Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let record of users">
+                    <td scope="row">{{record.name}}</td>
+                    <td>{{record.phone}}</td>
+                    <td>{{record.email}}</td>
+                    <td>{{record.address}}</td>
+                    <td>
+                        <a (click)="editRecord(record.contact_id)" class='btn btn-success'>
+                            <i class="fa fa-edit" style="color:white"></i> Edit
+                        </a>
+                    </td>
+                    <td>
+                        <a (click)="deleteRecord(record.contact_id)" class='btn btn-danger'>
+                            <i class="fa fa-trash" style="color:white"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- </cdk-virtual-scroll-viewport> -->
+    </div>
+</div>

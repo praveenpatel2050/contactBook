@@ -1,0 +1,27 @@
+<div class="container">
+    <header>
+        <h1 style="font-family: comis sans ms">Update ContactBook</h1>
+        <hr>
+    </header>
+    <form #myform="ngForm" (ngSubmit)="updateContact(myform)" class="was-validated" >
+        <div class="form-group">
+            <label for="updateContact-name"><span class="hidden">Name</span></label>
+            <input class="form-control" type="text" name="name" id="updateContact-name"  placeholder="Enter Name" [ngModel]="name" required>
+        </div>
+        <div class="form-group">
+            <label for="updateContact-email">Email</label>
+            <input type="email" class="form-control" name="email" id="updateContact-email"  placeholder="Enter Email"  autocomplete="email username" [ngModel]="email" required>
+        </div>
+        <div class="form-group">
+            <label for="updateContact-phone">Phone</label>
+            <input type="tel" class="form-control" name="phone" id="updateContact-phone" placeholder="Enter Telephone Number" autocomplete="tel" [ngModel]="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="updateContact-address">Address</label>
+            <textarea class="form-control" name="address" id="updateContact-address" placeholder="Enter Address" autocomplete="street-address" [ngModel]="address" required ></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="submit" value="Save" class="btn btn-info">
+        </div>
+    </form>
+</div>

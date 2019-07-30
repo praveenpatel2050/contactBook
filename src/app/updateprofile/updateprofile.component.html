@@ -1,0 +1,28 @@
+<div class="container">
+    <header>
+        <h1 style="font-family: comis sans ms">Edit Your Profile</h1>
+        <hr>
+    </header>
+             <form #myform="ngForm" (ngSubmit)="updateUser(myform)" class="was-validated" [formGroup] = "formdata">
+                <div class="form-group">
+                    <label for="updateUser-name"><span class="hidden">Name</span></label>
+                    <input class="form-control" type="text" name="name" id="updateUser-name" formControlName ="name"  required>
+                </div>
+                <div class="form-group">
+                    <label for="updateUser-email">Email</label>
+                    <input type="email" class="form-control" name="email" id="updateUser-email" formControlName ="email" placeholder="Enter Email" disabled="true"  autocomplete="email username" required="">
+                </div>
+                <div class="form-group">
+                    <label for="updateUser-phone">phone</label>
+                    <input type="tel" class="form-control" name="phone" id="updateUser-phone" formControlName ="phone" placeholder="Enter Telephone Number" autocomplete="tel"  required>
+                </div>
+                <div class="form-group">
+                    <label for="updateUser-address">Address</label>
+                    <textarea class="form-control" name="address" id="updateUser-address" formControlName ="address" placeholder="Enter Address" autocomplete="street-address"  required ></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" [disabled] = "!formdata.valid" name="submit" value="Update" class="btn btn-info">
+                </div>
+            </form>
+    </div>

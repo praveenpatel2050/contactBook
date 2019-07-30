@@ -1,0 +1,16 @@
+.NewContact{
+    float: right;
+}
+table{
+    width: 100% !important;
+    display: inline-table;
+    border:2px solid salmon;
+    /* border-block-start-color: blanchedalmond; */
+}
+table td{
+    width:100/6%;
+}
+tr,td,th,tr.th,thead{
+    border:2px solid salmon;
+
+}
